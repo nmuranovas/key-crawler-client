@@ -1,12 +1,9 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer: React.FC<{ className?: string }> = ({ className }) => {
     return (
-        <footer className="fixed bottom-0 text-center w-full bg-gray-300 shadow-2xl">
-            <hr />
-            <section className="my-4">
-                <small className="text-gray-500">Copyright &copy; {new Date().getUTCFullYear()} Nerijus Muranovas. All Rights Reserved</small>
-            </section>
+        <footer className={"text-center max-w-5xl mx-auto border-t py-4 align-middle" + ` ${className}`}>
+            <small className="text-gray-500">Made by <a href="https://github.com/nmuranovas">Nerijus Muranovas</a> @ {new Date().getUTCFullYear()}</small>
         </footer>
     )
 }
